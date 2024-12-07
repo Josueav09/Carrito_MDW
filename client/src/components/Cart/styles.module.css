@@ -1,0 +1,252 @@
+/* .cartContainer {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: Roboto;
+  
+    .buttonCartContainer {
+      position: absolute;
+      margin-top: 10px;
+      margin-right: 20px;
+      cursor: pointer;
+      z-index: 2;
+  
+      svg {
+        height: 25px;
+        margin-right: 2px;
+      }
+  
+      .buttonCart {
+        background-color: #222222;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+      }
+      .productsNumber {
+        height: 20px;
+        width: 20px;
+        border-radius: 999px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fb3939;
+        font-size: 12px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  
+    .cart {
+      position: absolute;
+      margin-top: 10px;
+      margin-right: 20px;
+      border-radius: 30px;
+      width: 400px;
+      background-color: #222222;
+      color: white;
+  
+      h2 {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 35px;
+      }
+  
+      .cartVacio {
+        text-align: center;
+        margin-top: 5px;
+        font-size: 14px;
+      }
+  
+      .total {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 15px;
+        padding-bottom: 35px;
+      }
+  
+      .productsContainer{
+        max-height: 200px;
+        overflow-y: scroll;
+        margin-top: 5px;
+      }
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  ::-webkit-scrollbar:vertical {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+  }
+
+  .clearCartButton {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .clearCartButton:hover {
+    background-color: #ff1744;
+  }
+   */
+   /* Estilos para el contenedor del carrito */
+/* Estilos generales del contenedor del carrito */
+.cartContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px; /* Ajusta el margen según necesites */
+  z-index: 10;
+}
+
+/* Estilos para el botón del carrito */
+.buttonCartContainer {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo del carrito en sí */
+.buttonCart {
+  background-color: #ff6f61; /* Color principal del carrito */
+  padding: 14px; /* Aumentamos el padding */
+  border-radius: 50%;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1); /* Sombra más prominente */
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Efecto hover para el carrito */
+.buttonCart:hover {
+  transform: scale(1.2); /* Agrandamos el efecto hover */
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Número de productos en el carrito */
+.productsNumber {
+  position: absolute;
+  top: -14px; /* Ajustamos la posición */
+  right: -14px; /* Ajustamos la posición */
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 16px; /* Aumentamos el tamaño de la fuente */
+  padding: 8px; /* Aumentamos el padding */
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Estilos para el carrito desplegado */
+.cart {
+  position: absolute;
+  top: 70px; /* Ajustamos para que sobresalga más */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+  padding: 30px; /* Aumentamos el padding */
+  width: 400px; /* Aumentamos el tamaño del carrito */
+  border-radius: 8px;
+  z-index: 5;
+  transform: translateY(15px); /* Ajustamos el desplazamiento */
+  max-height: 600px; /* Aumentamos la altura máxima */
+  overflow-y: auto;
+}
+
+/* Títulos dentro del carrito */
+.cart h2 {
+  color: #333;
+  font-size: 24px; /* Aumentamos el tamaño del título */
+  margin-bottom: 25px; /* Aumentamos el margen */
+  font-weight: bold;
+}
+
+/* Mensaje si el carrito está vacío */
+.cartVacio {
+  text-align: center;
+  color: #888;
+  font-size: 18px; /* Aumentamos el tamaño de la fuente */
+}
+
+/* Contenedor de los productos dentro del carrito */
+.productsContainer {
+  margin-bottom: 20px; /* Aumentamos el margen */
+}
+
+/* Estilo del total dentro del carrito */
+.total {
+  font-size: 20px; /* Aumentamos el tamaño de la fuente */
+  font-weight: bold;
+  color: #333;
+  text-align: right;
+  margin-top: 30px; /* Aumentamos el margen superior */
+}
+
+/* Botón para limpiar el carrito */
+.clearCartButton {
+  width: 100%;
+  padding: 14px; /* Aumentamos el padding */
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px; /* Aumentamos el tamaño de la fuente */
+  transition: all 0.3s ease;
+  margin-top: 20px; /* Aumentamos el margen superior */
+}
+
+.clearCartButton:hover {
+  background-color: #e55a50;
+}
+
+/* Botón para confirmar compra */
+.confirmarCompraButton {
+  width: 100%;
+  padding: 14px; /* Aumentamos el padding */
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px; /* Aumentamos el tamaño de la fuente */
+  transition: all 0.3s ease;
+  margin-top: 20px; /* Aumentamos el margen superior */
+}
+
+.confirmarCompraButton:hover {
+  background-color: #45a049;
+}
+
+/* Enlace dentro del botón confirmar compra */
+.confirmarCompraButton a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Estilos para el icono del carrito abierto */
+.open {
+  transform: rotate(180deg);
+}

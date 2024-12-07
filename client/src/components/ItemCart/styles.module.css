@@ -1,0 +1,161 @@
+/* .cartItem {
+    height: 80px;
+    background-color: #3a3a3a;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  
+    img {
+      height: 65px;
+      border-radius: 5px;
+    }
+  
+    .dataContainer {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 15px 0;
+  
+      .left {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        p {
+            font-weight: bold;
+            font-size: 13px;
+        }
+  
+        .buttons {
+             display: flex;
+             gap: 5px;
+  
+             button {
+                 border: none;
+                 cursor: pointer;
+                 font-size: 12px;
+                 padding: 3px 5px;
+                 border-radius: 5px;
+                 font-weight: bold;
+                 color: #222222;
+             }
+        }
+      }
+  
+      .right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+  
+          div {
+              background-color: #FB3939;
+              width: 20px;
+              height: 20px;
+              border-radius: 999px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 12px;
+              font-weight: bold;
+          }
+  
+          p {
+              font-weight: bold;
+          }
+      }
+    }
+  } */
+
+  /* styles.module.css */
+
+/* Estilo para el contenedor principal del ítem en el carrito */
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+/* Estilo para la imagen del producto */
+.cartItem img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Contenedor de los datos del producto */
+.dataContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 16px;
+}
+
+/* Sección izquierda de los datos (nombre del producto y botones) */
+.left {
+  flex: 1;
+}
+
+/* Sección derecha de los datos (cantidad y precio total) */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Estilo para los botones de agregar y quitar productos */
+.buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.buttons button {
+  padding: 6px 12px;
+  background-color: #ff8c00;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #ff7b00;
+}
+
+/* Estilo para el texto que muestra la cantidad de productos y el total */
+.right div,
+.right p {
+  font-size: 18px; /* Aumentamos el tamaño de la fuente */
+  color: #ff6f61; /* Cambiamos el color para hacerlo más prominente */
+  font-weight: bold; /* Hacemos el texto más destacado */
+}
+
+/* Estilo para el nombre del producto */
+.left p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilo para los precios y cantidades */
+.right p {
+  margin-top: 4px;
+  font-size: 18px; /* Aumentamos aún más el tamaño del precio */
+  color: #ff6f61; /* Color más llamativo para resaltar el total */
+  font-weight: bold; /* Aumentamos el peso de la fuente para destacar el precio */
+}
+
